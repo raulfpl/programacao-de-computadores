@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+	int vet[18], mat[3][6], i, j;
+	
+	for(i=0;i<18;i++){
+		printf("Digite um numero (%d): ", i+1);
+		scanf("%d", &vet[i]);
+	}
+	
+	for(i=0;i<18;i++){
+		mat[i/6][i%6] = vet[i];
+	}
+	
+	printf("Matriz resultante:\n");
+	for(i=0;i<3;i++){
+		for(j=0;j<6;j++){
+			printf("%d\t", mat[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
